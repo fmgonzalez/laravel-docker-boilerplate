@@ -23,3 +23,9 @@ $ docker ps
 $ docker-machine ip
 ```
 All data and logs will be stored in `data` and `logs` root directories. Source projects in `src` root directory.
+
+## Laravel project
+
+  * psr-4 autoload
+  * RouteService Provider
+  * Custom resource view
