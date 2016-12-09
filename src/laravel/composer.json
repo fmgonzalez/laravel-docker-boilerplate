@@ -43,6 +43,23 @@
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
             "php artisan optimize"
+        ],
+        "php-doc": [
+            "rm -rf ../reports/phpdoc",
+            "mkdir -p ../reports/phpdoc/logs",
+            "$HOME/.composer/vendor/bin/phpdoc",
+            "rm -rf ../reports/phpdoc/phpdoc-cache*"
+        ],
+        "php-md": [
+            "rm -rf ../reports/phpmd",
+            "mkdir -p ../reports/phpmd",
+            "$HOME/.composer/vendor/bin/phpmd --ignore-violations-on-exit src html phpmd.rules.xml --reportfile ../reports/phpmd/phpmd.html"
+        ],
+        "lint": [
+            "$HOME/.composer/vendor/bin/php-cs-fixer fix src --dry-run --diff"
+        ],
+        "lint-fix": [
+            "$HOME/.composer/vendor/bin/php-cs-fixer fix src --diff"
         ]
     },
     "config": {

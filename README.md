@@ -29,3 +29,10 @@ All data and logs will be stored in `data` and `logs` root directories. Source p
   * psr-4 autoload
   * RouteService Provider
   * Custom resource view
+
+## Composer scripts
+
+  * `$ composer run-script php-md` - Runs [PHP Mess Detector](https://phpmd.org) and generate a report at `src/reports/phpmd/phpmd.html` directory with `phpmd.rules.xml` config params (checks for unused variable, some naming and cyclomatic complexity).
+  * `$ composer run-script php-doc` - Runs [PHP Documentor](https://phpdoc.org) and generate project documentation acording to `phpdoc.xml` config file (create a report at `src/reports/phpdoc` with `src` directory doc)
+  * `$ composer run-script lint` - Runs [PHP Coding Standards Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and *checks* coding standards (PSR-2)
+  * `$ composer run-script lint-fix` - Runs [PHP Coding Standards Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and *fix* coding standards (PSR-2)

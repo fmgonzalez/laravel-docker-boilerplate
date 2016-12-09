@@ -1,4 +1,7 @@
 {
     "require": {
+      "phpdocumentor/phpdocumentor": "2.9.0",
+      "phpmd/phpmd": "@stable",
+      "friendsofphp/php-cs-fixer": "@stable"      
     }
 }

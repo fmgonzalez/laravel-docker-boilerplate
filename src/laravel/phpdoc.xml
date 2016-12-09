@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+    <title>laravel-docker-boilerplate</title>
+    <parser>
+        <target>../reports/phpdoc</target>
+        <encoding>utf8</encoding>
+        <markers>
+            <item>TODO</item>
+            <item>FIXME</item>
+        </markers>
+        <extensions>
+            <extension>php</extension>
+        </extensions>
+        <visibility></visibility>
+    </parser>
+    <transformer>
+        <target>../reports/phpdoc</target>
+    </transformer>
+    <logging>
+        <level>warn</level>
+        <paths>
+            <default>../reports/phpdoc/logs/{DATE}.log</default>
+            <errors>../reports/phpdoc/logs/{DATE}.errors.log</errors>
+        </paths>
+    </logging>
+    <transformations>
+        <template name="responsive" />
+    </transformations>
+    <files>
+        <directory>src</directory>
+        <ignore>*blade.php</ignore>
+    </files>
+</phpdoc>
