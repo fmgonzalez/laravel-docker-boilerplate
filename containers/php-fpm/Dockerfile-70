@@ -117,6 +117,10 @@ RUN if [ ${INSTALL_AEROSPIKE_EXTENSION} = true ]; then \
     && rm /tmp/aerospike-client-php.tar.gz \
 ;fi
 
+RUN if [ ${INSTALL_AEROSPIKE_EXTENSION} = false ]; then \
+    rm /usr/local/etc/php/conf.d/aerospike.ini \
+;fi
+
 #####################################
 # Opcache:
 #####################################
@@ -128,6 +132,10 @@ RUN if [ ${INSTALL_OPCACHE} = true ]; then \
 
 # Copy opcache configration
 COPY ./opcache.ini /usr/local/etc/php/conf.d/opcache.ini
+
+RUN if [ ${INSTALL_OPCACHE} = false ]; then \
+    rm /usr/local/etc/php/conf.d/opcache.ini \
+;fi
 
 #####################################
 # Codeigniter Modifications:
